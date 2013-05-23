@@ -1,0 +1,109 @@
+<!doctype html>
+ 
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Silex v2 WYSIWYG prototype</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <script src="pageable.js"></script>
+  <style>
+  .controlbar{
+    z-index: 99999999;
+  }
+  .container{
+    display: none;
+  }
+  .label-type{
+    color: white;
+  }
+  </style>
+
+  <script type="text/javascript">
+    $(function() {
+        $( '#repeat' ).buttonset();
+        $( 'body' ).pageable({defaultPage: 'page1'});
+    })
+  </script>
+
+ </head>
+<body>
+  <span id="repeat">
+      <label for="repeat0"><a href="#page1">page1</a></label>
+      <label for="repeat1"><a href="#page2">page2</a></label>
+      <label for="repeat2"><a href="#page3">page3</a></label>
+  </span>
+  <a href="https://github.com/silexlabs/editable"><img style="position: absolute; z-index:999999; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+
+<div class="background">
+    
+
+    <div 
+      class="container page1 page2"
+      style="background-color: #000066; left: 544px; top: 47px; position: absolute; width: 362px; height: 320px;"
+      >
+          <p class="label-type">On pages 1 and 2</p>
+          <div 
+            class="editable-element editable-style"
+            style="background-color: #000000; "
+            >
+              <p class="label-type">Element</p>
+          </div>
+    </div>
+
+    <div 
+      class="container page1"
+      style="background-color: #000066; left: 44px; top: 47px; position: absolute; width: 362px; height: 320px;"
+      >
+          <p class="label-type">On page 1</p>
+          <div 
+            class="editable-element editable-style"
+            style="background-color: #000000; "
+            >
+              <p class="label-type">Element</p>
+          </div>
+    </div>
+
+    <div 
+      class="container page2"
+      style="background-color: #000000; left: 136px; top: 75px; position: absolute; width: 321px; height: 390px;"
+      >
+          <p class="label-type">On page 2</p>
+          <div 
+            class="editable-element editable-style"
+            style="background-color: #006600; position: absolute; top: -1px; left: 80px; height: 147px;"
+            >
+              <p class="label-type">Element</p>
+          </div>
+          <div 
+            class="editable-element editable-style"
+            style="background-color: #660000; "
+            >
+              <p class="label-type">Element</p>
+          </div>
+          <div 
+            class="editable-element editable-style"
+            style="background-color: #006666; left: 108px; top: 217px;"
+            >
+              <p class="label-type">Element</p>
+          </div>
+          <div 
+            class="editable-element editable-style"
+            style="background-color: #666600; "
+            >
+              <p class="label-type">Element</p>
+          </div>
+          <div 
+            class="editable-element editable-style"
+            style="background-color: #660066; "
+            >
+              <p class="label-type">Element</p>
+          </div>
+    </div>
+    <div class='container page3' style="background-color: #006666; left: 108px; top: 217px;">
+      <p class="label-type">On page 3</p>
+    </div>
+</div>
+</body>
+</html>
