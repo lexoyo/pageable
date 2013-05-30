@@ -5,8 +5,8 @@
   <meta charset="utf-8" />
   <title>Silex v2 WYSIWYG prototype</title>
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
-  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <script src="libs/jquery.js"></script>
+  <script src="libs/jquery-ui.js"></script>
   <script src="pageable.js"></script>
   <style>
   .controlbar{
@@ -23,7 +23,7 @@
   <script type="text/javascript">
     $(function() {
         $( '#repeat' ).buttonset();
-        $( 'body' ).pageable({defaultPage: 'page1'});
+        $( 'body' ).pageable({defaultPage: 'page1', useDeeplink:false});
     })
   </script>
 
